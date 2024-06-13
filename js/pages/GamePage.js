@@ -9,8 +9,11 @@ export default class GamePage extends Page {
         this.clueOffset = 15;
         this.clueFontSize = 11;
         this.level = Number(localStorage.getItem('level')) ?? 1;
+        console.log(this.level)
         this.solution = getNonogram(this.level) ?? getNonogram(1);
+        console.log(this.solution)
         this.nonogram = this.#generateNonogramArray();
+        console.log(this.nonogram)
         this.fanfareSound = new Audio('../../media/fanfare.mp3');
     }
 
